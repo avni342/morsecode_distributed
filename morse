@@ -1,0 +1,635 @@
+const int buz = 8;
+const int led = 13;
+
+String code = "";
+int len = 0;
+char ch;
+char new_char;
+int unit_delay = 250;
+void dot()
+{
+Serial.print(".");
+digitalWrite(buz, HIGH);
+digitalWrite(led, HIGH);
+
+  
+delay(unit_delay);
+
+digitalWrite(buz, LOW);
+ digitalWrite(led, LOW);
+delay(unit_delay);
+}
+void dash()
+{
+Serial.print("-"); 
+digitalWrite(buz, HIGH);
+  digitalWrite(led, HIGH);
+delay(unit_delay * 3);
+
+digitalWrite(buz, LOW);
+  digitalWrite(led, LOW);
+delay(unit_delay);
+}
+void A()
+{ 
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void B()
+{
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void C()
+{
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void D()
+{
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void E()
+{
+    dot();
+    delay(unit_delay);
+}
+void f()
+{
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void G()
+{
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void H()
+{
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void I()
+{
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void J()
+{
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void K()
+{
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void L()
+{
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void M()
+{
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void N()
+{
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void O()
+{
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void P()
+{
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dot();
+}
+void Q()
+{
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void R()
+{
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void S()
+{
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void T()
+{
+    dash();
+    delay(unit_delay);
+}
+void U()
+{
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void V()
+{
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void W()
+{
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void X()
+{
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void Y()
+{
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void Z()
+{
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void one()
+{
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void two()
+{
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void three()
+{
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void four()
+{
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void five()
+{
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void six()
+{
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void seven()
+{
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void eight()
+{
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void nine()
+{
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dot();
+    delay(unit_delay);
+}
+void zero()
+{
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+    dash();
+    delay(unit_delay);
+}
+void morse()
+{
+
+    switch (ch)
+    {
+    case 'A':
+    case 'a':
+        A();
+        Serial.print(" ");
+        break;
+
+    case 'B':
+    case 'b':
+        B();
+        Serial.print(" ");
+        break;
+
+    case 'C':
+    case 'c':
+        C();
+        Serial.print(" ");
+        break;
+
+    case 'D':
+    case 'd':
+        D();
+        Serial.print(" ");
+        break;
+
+    case 'E':
+    case 'e':
+        E();
+        Serial.print(" ");
+        break;
+    case 'F':
+    case 'f':
+        f();
+        Serial.print(" ");
+        break;
+    case 'G':
+    case 'g':
+        G();
+        Serial.print(" ");
+        break;
+    case 'H':
+    case 'h':
+        H();
+        Serial.print(" ");
+        break;
+    case 'I':
+    case 'i':
+        I();
+        Serial.print(" ");
+        break;
+    case 'J':
+    case 'j':
+        J();
+        Serial.print(" ");
+        break;
+    case 'K':
+    case 'k':
+        K();
+        Serial.print(" ");
+        break;
+    case 'L':
+    case 'l':
+        L();
+        Serial.print(" ");
+        break;
+    case 'M':
+    case 'm':
+        M();
+        Serial.print(" ");
+        break;
+    case 'N':
+    case 'n':
+        N();
+        Serial.print(" ");
+        break;
+    case 'O':
+    case 'o':
+        O();
+        Serial.print(" ");
+        break;
+    case 'P':
+    case 'p':
+        P();
+        Serial.print(" ");
+        break;
+    case 'Q':
+    case 'q':
+        Q();
+        Serial.print(" ");
+        break;
+    case 'R':
+    case 'r':
+        R();
+        Serial.print(" ");
+        break;
+    case 'S':
+    case 's':
+        S();
+        Serial.print(" ");
+        break;
+    case 'T':
+    case 't':
+        T();
+        Serial.print(" ");
+        break;
+    case 'U':
+    case 'u':
+        U();
+        Serial.print(" ");
+        break;
+    case 'V':
+    case 'v':
+        V();
+        Serial.print(" ");
+        break;
+    case 'W':
+    case 'w':
+        W();
+        Serial.print(" ");
+        break;
+    case 'X':
+    case 'x':
+        X();
+        Serial.print(" ");
+        break;
+    case 'Y':
+    case 'y':
+        Y();
+        Serial.print(" ");
+        break;
+    case 'Z':
+    case 'z':
+        Z();
+        Serial.print(" ");
+        break;
+    case '0':
+        zero();
+        Serial.print(" ");
+        break;
+    case '1':
+        one();
+            Serial.print(" ");
+        break;
+    case '2':
+        two();
+            Serial.print(" ");
+        break;
+    case '3':
+        three();
+            Serial.print(" ");
+        break;
+    case '4':
+        four();
+            Serial.print(" ");
+        break;
+    case '5':
+        five();
+            Serial.print(" ");
+        break;
+    case '6':
+        six();
+            Serial.print(" ");
+        break;
+    case '7':
+        seven();
+            Serial.print(" ");
+        break;
+    case '8':
+        eight();
+            Serial.print(" ");
+        break;
+    case '9':
+        nine();
+            Serial.print(" ");
+        break;
+    case ' ':
+        delay(unit_delay * 7);
+        Serial.print("/ ");
+
+    default:
+        Serial.print("undefined symbol");
+        break;
+    }
+}
+
+//function which convert string to morse code by iterating into the string
+void String2Morse()
+{
+    len = code.length();
+    for (int i = 0; i < len; i++)
+    {
+        ch = code.charAt(i);
+        morse(); //call the morse function to convert the specific character to it's respective morse code
+    }
+}
+void setup()
+{
+    Serial.begin(9600); //main command to start arduino
+
+    pinMode(buz, OUTPUT); 
+    pinMode(led, OUTPUT);
+  //given output through buzzer
+    Serial.println("HEY! ENTER YOUR INPUT: "); //for taking user input
+}
+void loop()
+{
+    unsigned long timeBegin = micros();
+    while (Serial.available()) //loop until serial monitor is ON
+    {
+        code = Serial.readString();
+        Serial.print(code);
+        Serial.print(" = ");
+        String2Morse();
+        Serial.println("");
+    }
+    delay(1000); 
+  if(code!=0){
+      unsigned long timeEnd = micros();
+      unsigned long duration = timeEnd - timeBegin;
+      double averageDuration = (double)duration / 1000000.0;  
+      Serial.print("Duration for character ");
+      Serial.print(averageDuration);
+    //Serial.print(code);
+      Serial.println(" seconds");
+      code="";
+    }
+  //delay(1000);  
+}
